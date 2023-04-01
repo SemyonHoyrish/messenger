@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import ErrorPage from './components/ErrorPage';
+import ChatsListPage from './components/ChatsListPage';
+
+export enum Page {
+  None,
+  Auth,
+  ChatsList,
+  Chat,
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  // check for auth
+  let [page, setPage] = useState(Page.ChatsList);
+  let [chatID, setChatID] = useState(0);
+
+  switch (page) {
+    case Page.ChatsList:
+      return (
+        <ChatsListPage setPage={setPage} setChatID={setChatID} />
+      )
+    
+    default:
+      return (
+        <ErrorPage />
+      )
+  }
 }
 
 export default App;
