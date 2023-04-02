@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TextInput from "./TextInput";
+import Button from "./Button";
 
 type NewChatPopupProps = {
   setIsPopupOpen: any;
@@ -27,10 +28,10 @@ export default function NewChatPopup(props: NewChatPopupProps) {
           <TextInput setValue={setSomeonesCode} placeholder="input someone's code" />
         </div>
         <div className="NewChatPopupItem NewChatPopup-addButton NewChatPopupButton">
-          <button onClick={() => {props.addChatFunction(someonesCode); props.setIsPopupOpen(false);}}>add</button>
+          <Button onClick={() => {props.addChatFunction(someonesCode); props.setIsPopupOpen(false);}}>add</Button>
         </div>
         <div className="NewChatPopupItem NewChatPopup-cancelButton NewChatPopupButton">
-          <button onClick={() => {props.setIsPopupOpen(false);}}>cancel</button>
+          <Button onClick={() => {props.setIsPopupOpen(false);}}>cancel</Button>
         </div>
       </div>
     </div>
