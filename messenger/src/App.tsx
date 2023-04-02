@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import ErrorPage from './components/ErrorPage';
 import ChatsListPage from './components/ChatsListPage';
+import ChatPage from './components/ChatPage';
 
 export enum Page {
   None,
@@ -19,12 +20,17 @@ function App() {
     case Page.ChatsList:
       return (
         <ChatsListPage setPage={setPage} setChatID={setChatID} />
-      )
+      );
+
+    case Page.Chat:
+      return (
+        <ChatPage setPage={setPage} chatID={chatID} />
+      );
     
     default:
       return (
         <ErrorPage />
-      )
+      );
   }
 }
 

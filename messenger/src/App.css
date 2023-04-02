@@ -39,3 +39,60 @@
   color: #fff;
   font-size: 22px;
 }
+
+
+.message {
+  background-color: #464646;
+  padding: 15px 20px;
+  margin: 25px 25px 25px 25px;
+  max-width: 60%;
+  min-width: 20%;
+  width: fit-content;
+  border-radius: 10px;
+}
+
+.interlocutor_message {
+  margin-left: 25px;
+  margin-right: auto;
+  border-bottom-left-radius: 0;
+  text-align: left;
+}
+
+.user_message {
+  margin-right: 25px;
+  margin-left: auto;
+  border-bottom-right-radius: 0;
+  text-align: right;
+}
+
+.message-text {
+  color: #fff;
+  margin: 0;
+}
+
+.bottomRef {
+  margin-top: 80px;
+}
+
+.MessageInput {
+  height: 50px;
+  background-color: #464646;
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.MessageInput-input {
+  margin: 0;
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+}
+.MessageInput-send {
+  margin: 0;
+  width: 50px;
+}
