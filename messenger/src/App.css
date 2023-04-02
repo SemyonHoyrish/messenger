@@ -2,7 +2,20 @@
   box-sizing: border-box;
 }
 
+.topRef {
+  margin-top: 60px;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
 .header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+
   background-color: #3A3A3A;
   height: 60px;
   display: flex;

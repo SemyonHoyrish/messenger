@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import ChatMessage, { MessageOwner } from "./ChatMessage";
 import Header from "./Header";
 import MessageInput from "./MessageInput";
+import { Page } from "../App";
 
 type ChatPageProps = {
   chatID: number;
@@ -24,7 +25,7 @@ export default function ChatPage(props: ChatPageProps) {
 
   return (
     <>
-      <Header title="nickname" />
+      <Header title="nickname" goBackFunction={() => {props.setPage(Page.ChatsList)}} />
       <ChatMessage owner={MessageOwner.User} text="some text text" />
       <ChatMessage owner={MessageOwner.User} text={lorem} />
       <ChatMessage owner={MessageOwner.Interlocutor} text="some text text" />
