@@ -29,6 +29,13 @@
   margin: 0;
   color: #fff;
 }
+.header-settings {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  right: 15px;
+  cursor: pointer;
+}
 
 .ChatSelectButton {
   display: flex;
@@ -205,3 +212,34 @@
   border: none;
   cursor: pointer;
 }
+
+.AuthPage {
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #464646;
+}
+.AuthPage .wrapper {
+  max-width: 80%;
+}
+.AuthPage .input {
+  margin-bottom: 20px;
+}
+
+.SettingsPage {
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #464646;
+}
+.SettingsPage .wrapper {
+  max-width: 80%;
+}
+.SettingsPage .input {
+  margin-bottom: 20px;
+}
+

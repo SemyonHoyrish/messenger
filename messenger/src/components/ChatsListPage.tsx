@@ -15,7 +15,7 @@ export default function ChatsListPage(props: ChatsListPageProps) {
 
   return (
     <>
-      <Header title="Chats" />
+      <Header title="Chats" setPage={props.setPage} />
       <NewChatButton popupOpenFunction={() => {setIsPopupOpen(true)}} />
       {isPopupOpen && <NewChatPopup setIsPopupOpen={setIsPopupOpen} addChatFunction={() => {}}  />}
       <ChatSelectButton avatarURL={default_avatar}

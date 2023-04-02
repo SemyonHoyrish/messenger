@@ -25,7 +25,7 @@ export default function ChatPage(props: ChatPageProps) {
 
   return (
     <>
-      <Header title="nickname" goBackFunction={() => {props.setPage(Page.ChatsList)}} />
+      <Header title="nickname" setPage={props.setPage} goBack />
       <ChatMessage owner={MessageOwner.User} text="some text text" />
       <ChatMessage owner={MessageOwner.User} text={lorem} />
       <ChatMessage owner={MessageOwner.Interlocutor} text="some text text" />
