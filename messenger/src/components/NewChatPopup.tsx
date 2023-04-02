@@ -1,4 +1,5 @@
 import { useState } from "react";
+import TextInput from "./TextInput";
 
 type NewChatPopupProps = {
   setIsPopupOpen: any;
@@ -23,7 +24,7 @@ export default function NewChatPopup(props: NewChatPopupProps) {
           <p className="NewChatPopup-yourCode-reset" onClick={resetCode}>reset</p>
         </div>
         <div className="NewChatPopupItem NewChatPopup-inputCode">
-          <input type="text" placeholder="input someone's code" onChange={(e) => {setSomeonesCode(e.target.value);}} />
+          <TextInput setValue={setSomeonesCode} placeholder="input someone's code" />
         </div>
         <div className="NewChatPopupItem NewChatPopup-addButton NewChatPopupButton">
           <button onClick={() => {props.addChatFunction(someonesCode); props.setIsPopupOpen(false);}}>add</button>
